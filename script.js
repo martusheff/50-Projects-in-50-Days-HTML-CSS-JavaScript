@@ -1,75 +1,61 @@
-const progress = document.getElementById('progress')
-const prev = document.getElementById('prev')
-const next = document.getElementById('next')
-const circles = document.querySelectorAll('.circle')
-const body = document.getElementById('body')
-const reset = document.getElementById('reset')
+const panels = document.querySelectorAll('.panel')
+const nextPhoto = document.querySelector('.nextPhoto')
+const lastPhoto = document.querySelector('.lastPhoto')
+const clearSelection = document.querySelector('.clearSelection')
 
-
-const circleColors = ["#3498db", "#db3434", "#34db95","#ac34db","#dbc234"]
-
-let currentActive = 1
-
-next.addEventListener('click', () => {
-    currentActive++
-    
-    if(currentActive > circles.length) {
-        currentActive = circles.length
-    }
-    update()
-    //changeColor()
+panels.forEach((panel) => {
+    panel.addEventListener('click', () => {
+        removeActiveClasses()
+        panel.classList.add('active')
+    })
 })
 
-prev.addEventListener('click', () => {
-    currentActive--
-    
-    if(currentActive < 1) {
-        currentActive = 1
-    }
-    update()
-    //changeColor()
-    
-})
-
-reset.addEventListener('click', () => {
-    currentActive = 1
-    //changeColor()
-    
-    update()
-    next.disabled = false
-})
-
-function changeColor() {
-    
-    circles[currentActive - 1].style.border ="3px solid " + circleColors[currentActive-1]
-    progress.style.backgroundColor = circleColors[currentActive-1]
-    prev.style.backgroundColor = circleColors[currentActive-1]
-    next.style.backgroundColor = circleColors[currentActive-1]
-    body.style.backgroundColor = circleColors[currentActive-1]+"15"
+function removeActiveClasses() {
+    panels.forEach((panel) => {
+        panel.classList.remove('active')
+    })
 }
 
-function update() {
-    circles.forEach((circle, index) => {
-        if(index < currentActive) {
-            
-            circle.classList.add('active')
-        } else {
-            circle.classList.remove('active')
-        }
-    })
+nextPhoto.addEventListener('click', () => {
+    selectNextPhoto()
+})
 
-    const actives = document.querySelectorAll('.active')
+lastPhoto.addEventListener('click', () => {
+    selectLastPhoto()
+})
 
-    progress.style.width = (actives.length - 1) / (circles.length - 1) * 100 + '%'
+clearSelection.addEventListener('click', () => {
+    removeActiveClasses()
+})
 
-    if(currentActive === 1) {
-        prev.disabled = true
-    } else if (currentActive === circles.length) {
-        next.disabled = true 
+function selectLastPhoto() {
+    var currentlySelected = getSelectedPhotoIndex()
+
+    if(currentlySelected > 0 && currentlySelected <= 4) {
+        removeActiveClasses()
+        panels[currentlySelected - 1].classList.add('active')
     } else {
-        prev.disabled = false
-        next.disabled = false
+        removeActiveClasses()
+        panels[4].classList.add('active')
     }
+}
 
+function selectNextPhoto() {
+    var currentlySelected = getSelectedPhotoIndex()
+    
+    if(currentlySelected >= 0 && currentlySelected < 4) {
+        removeActiveClasses()
+        panels[currentlySelected + 1].classList.add('active')
+    } else {
+        removeActiveClasses()
+        panels[0].classList.add('active')
+    }
+}
 
+function getSelectedPhotoIndex() {
+    for(var i = 0; i < panels.length; i++) {
+        if(panels[i].classList.contains('active')) {
+            return i;
+        }
+    }
 }
