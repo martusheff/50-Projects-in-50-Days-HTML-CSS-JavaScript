@@ -2,6 +2,7 @@
 
 :root {
   --line-border-fill: #3498db;
+  --line-border-filld: #dbc234;
   --line-border-empty: #e0e0e0;
 }
 
@@ -22,6 +23,10 @@ body {
 
 .container {
   text-align: center;
+}
+
+#reset {
+  background-color: #999;
 }
 
 .progress-container {
