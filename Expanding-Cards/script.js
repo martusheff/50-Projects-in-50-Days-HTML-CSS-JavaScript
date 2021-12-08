@@ -55,7 +55,6 @@ function selectNextPhoto() {
 function getSelectedPhotoIndex() {
     for(var i = 0; i < panels.length; i++) {
         if(panels[i].classList.contains('active')) {
-            console.log(i)
             return i;
         }
     }
