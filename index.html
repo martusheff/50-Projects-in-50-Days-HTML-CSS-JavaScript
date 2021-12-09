@@ -5,53 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-    <title>Expanding Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Rotating Navigation</title>
 </head>
 <body>
-    <div>
-        <div class="title">
-            <h1>United States of America</h1>
-            <h2>By: Andronick Martusheff</h2>
-         </div>
-         
-         <div class="buttons">
-             <button class="nextPhoto selector">
-                 Next Photo
-             </button>
-
-             <button class="lastPhoto selector">
-                Last Photo
-            </button>
-
-             <button class="clearSelection selector">
-               Clear Selection
-            </button>
-         </div>
-
-         <div class="container">
-            <div class="panel active" style="background-image: url('https://images.unsplash.com/photo-1464660756002-dd9f9a92b01b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1451&q=80')">
-                <h3>Freedom Rise</h3>
-            </div>
-        
-            <div class="panel" style = "background-image: url('https://images.unsplash.com/photo-1512315342380-81f12a02bd7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=926&q=80')">
-                <h3>Lady Liberty</h3>
-            </div>
-
-            <div class="panel" style ="background-image: url('https://images.unsplash.com/photo-1506886009355-7f3af05dd5d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')">
-                <h3>Rushmore</h3>
-            </div>
-
-            <div class="panel" style ="background-image: url('https://images.unsplash.com/photo-1590253230365-b9f5b7fd2714?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1454&q=80')">
-                <h3>Times Square</h3>
-            </div>
-            
-            <div class="panel" style ="background-image: url('https://images.unsplash.com/photo-1457139621581-298d1801c832?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1403&q=80');">
-                <h3>Faith</h3>
+    <div class="container">
+        <div class="circle-container">
+            <div class="circle">
+                <button id="close">
+                    <i class="fas fa-times"></i>
+                        <button id="open">
+                            <i class="fas fa-bars"> </i>
+                                
+                            
+                        </button>
+                   
+                </button>
             </div>
         </div>
+        <div class="content">
+            <h1>Amazing Article</h1>
+            <small>Andronick Martusheff</small>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quae delectus fugiat earum sequi debitis, sit voluptates quis sunt eveniet laudantium, nam aspernatur quisquam rem. Debitis facere enim natus architecto quo fugiat dolor dolore! Facilis doloribus natus amet iure iusto nobis, pariatur, qui ut ipsa laboriosam provident dolore ipsam odit deserunt officia modi possimus obcaecati fugiat dicta at magni. Voluptatibus minima natus possimus debitis odio, provident dolorem neque aliquam voluptatem excepturi facilis, dignissimos quod et vel praesentium delectus rerum sapiente! Nihil quae consequatur atque! Magni blanditiis illo, incidunt alias quidem ullam minima, vero quos esse animi quis placeat doloremque praesentium.</p>
+            <h3>My Cat</h3>
+            <img src="https://wallpapercave.com/wp/wp8239393.jpg" alt="kitty">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio pariatur officiis molestiae molestias assumenda, magni architecto alias, quod voluptatem perspiciatis libero repellat facere at sapiente unde voluptatum recusandae debitis! Animi ea repellat molestiae ipsum perferendis nemo exercitationem, a hic assumenda suscipit praesentium possimus eius necessitatibus natus laudantium, architecto recusandae doloribus eos non! Quidem tenetur sunt expedita distinctio quos qui pariatur quaerat corrupti, repudiandae veritatis fugit illum rem eius nulla dolores laudantium incidunt non, nam ea.</p>
+        
+        </div>
     </div>
-    
+
+    <nav>
+        <ul>
+            <li><i class="fas fa-home"></i>Home</li>
+            <li><i class="fas fa-user-alt"></i>About</li>
+            <li><i class="fas fa-envelope"></i>Contact</li>
+        </ul>
+    </nav>
 
     <script src="script.js"></script>
 </body>
