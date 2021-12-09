@@ -39,6 +39,10 @@ body {
   transition: transform 0.5s linear;
 }
 
+.nav {
+  cursor: pointer;
+}
+
 .container.show-nav .circle {
   transform: rotate(-70deg);
 }
@@ -109,6 +113,11 @@ nav ul li i {
   margin-right: 10px;
 }
 
+nav ul li:focus {
+  color: #ff7979;
+  font-weight: bold;
+}
+
 .content img {
   max-width: 100%;
 }
@@ -116,6 +125,7 @@ nav ul li i {
 .content {
   max-width: 1000px;
   margin: 50px auto;
+  position: unset;
 }
 
 .content h1 {
