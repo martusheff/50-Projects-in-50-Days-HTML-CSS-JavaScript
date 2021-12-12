@@ -18,10 +18,10 @@ body {
   background: url('https://images.unsplash.com/photo-1506259091721-347e791bab0f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80')
     no-repeat center center/cover;
   position: absolute;
-  top: -50px;
-  left: -50px;
-  width: calc(100vw + 90px);
-  height: calc(100vh + 90px);
+  top: -150px;
+  left: -150px;
+  width: calc(100vw + 300px);
+  height: calc(100vh + 300px);
   z-index: -1;
   filter: blur(30px);
 }
