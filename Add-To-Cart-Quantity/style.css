@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: #f3f3f3;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toast.active{
+  padding: 8px 24px;
+  background-color: rgb(194, 226, 194);
+  top: 10px;
+  right: 10px;
+  color: #4b4b4b;
+  position: fixed;
+  transition: ease-in-out .5s;
+  opacity: 1;
+}
+
+.toast {
+  opacity: 0;
+  
+}
+
+button {
+  height: 50px;
+}
+
+button#addToCart {
+  margin-right: 15px;
+  background-color: #4b4b4b;
+  width: 150px;
+  border: 0;
+  color: white;
+  text-transform: uppercase;
+}
+
+button#addToCart:hover {
+  background-color: white;
+  color: #4b4b4b;
+  border: 2px solid;
+}
+
+button#addToCart:active {
+  transform: scale(.98);
+}
+
+button.selector {
+  width: 50px;
+  background-color: #c9c9c9;
+  border: 0;
+}
+
+button.selector:hover {
+  background-color: #4b4b4b;
+  color: white;
+}
+
+button.selector:active {
+  transform: scale(.98);
+}
+
+input {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  border: 0;
+  padding: 0;
+  
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+span {
+  opacity: 0;
+}
+
+span.active{
+  opacity: 1;
+  background-color: white;
+  border: 1px solid;
+  color: #4b4b4b;
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px;
+  text-align: center;
+}
